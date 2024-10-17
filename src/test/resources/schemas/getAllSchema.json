@@ -1,0 +1,160 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Welcome2Element"
+    },
+    "definitions": {
+        "Welcome2Element": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "userAddress": {
+                    "$ref": "#/definitions/UserAddress"
+                },
+                "user_id": {
+                    "type": "integer"
+                },
+                "user_first_name": {
+                    "type": "string"
+                },
+                "user_last_name": {
+                    "type": "string"
+                },
+                "user_contact_number": {
+                    "type": "integer"
+                },
+                "user_email_id": {
+                    "type": "string"
+                },
+                "creation_time": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "last_mod_time": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "creation_time",
+                "last_mod_time",
+                "userAddress",
+                "user_contact_number",
+                "user_email_id",
+                "user_first_name",
+                "user_id",
+                "user_last_name"
+            ],
+            "title": "Welcome2Element"
+        },
+        "UserAddress": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "addressId": {
+                    "type": "integer"
+                },
+                "plotNumber": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "street": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "state": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "country": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/Country"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "zipCode": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "addressId",
+                "country",
+                "plotNumber",
+                "state",
+                "street",
+                "zipCode"
+            ],
+            "title": "UserAddress"
+        },
+        "Country": {
+            "type": "string",
+            "enum": [
+                "USA",
+                "usa",
+                "Indian",
+                "us",
+                "ghjjj",
+                "kjdhfgka",
+                "eee",
+                "MD",
+                "US",
+                "Chase",
+                "huh",
+                "India",
+                "india",
+                "Canada",
+                "United states",
+                "Uk",
+                "canada",
+                "AAS",
+                "USofA",
+                "INDIA",
+                "qazw",
+                "string",
+                "sss",
+                "subscribe",
+                "UnitedStates",
+                "Mexico",
+                "IND",
+                "unitedstates",
+                "Australia",
+                "USa",
+                "USA ",
+                "re",
+                "null",
+                "Unitedstates"
+            ],
+            "title": "Country"
+        }
+    }
+}

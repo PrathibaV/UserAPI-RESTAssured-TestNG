@@ -1,0 +1,87 @@
+{
+        "$ref": "#/definitions/Welcome7",
+        "definitions": {
+            "Welcome7": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "userAddress": {
+                        "$ref": "#/definitions/UserAddress"
+                    },
+                    "user_id": {
+                        "type": "integer"
+                    },
+                    "user_first_name": {
+                        "type": "string"
+                    },
+                    "user_last_name": {
+                        "type": "string"
+                    },
+                    "user_contact_number": {
+                        "type": "integer"
+                    },
+                    "user_email_id": {
+                        "type": "string"
+                    },
+                    "creation_time": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "last_mod_time": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "required": [
+                    "creation_time",
+                    "last_mod_time",
+                    "user_contact_number",
+                    "user_email_id",
+                    "user_first_name",
+                    "user_id",
+                    "user_last_name"
+                ],
+                "title": "Welcome7"
+            },
+            "UserAddress": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "addressId": {
+                        "type": "integer"
+                    },
+                    "plotNumber": {
+                        "oneOf": [
+                            { "type": "string" },
+                            { "type": "null" }
+                        ]
+                    },
+                    "street": {
+                       "oneOf": [
+                            { "type": "string" },
+                            { "type": "null" }
+                        ]
+                    },
+                    "state": {
+                       "oneOf": [
+                            { "type": "string" },
+                            { "type": "null" }
+                        ]
+                    },
+                    "country": {
+                        "oneOf": [
+                            { "type": "string" },
+                            { "type": "null" }
+                        ]
+                    },
+                    "zipCode": {
+                        "oneOf": [
+                            { "type": "integer" },
+                            { "type": "null" }
+                        ]
+                    }
+                },
+                "title": "UserAddress"
+            }
+        }
+}
